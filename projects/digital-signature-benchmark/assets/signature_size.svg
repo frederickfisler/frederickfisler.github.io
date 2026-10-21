@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="600" viewBox="0 0 1050 600">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<style>text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#0f172a}.muted{fill:#64748b}.grid{stroke:#cbd5e1;stroke-width:1}.bar{rx:7}</style>
+<text x="42" y="52" font-size="28" font-weight="700">Encoded signature size</text>
+<text x="42" y="82" font-size="14" class="muted">Median encoded signature size across 5 independent run(s); whiskers show 95% bootstrap CI</text>
+<line x1="230.0" y1="140" x2="230.0" y2="555" class="grid"/>
+<text x="230.0" y="580" text-anchor="middle" font-size="12" class="muted">0</text>
+<line x1="370.0" y1="140" x2="370.0" y2="555" class="grid"/>
+<text x="370.0" y="580" text-anchor="middle" font-size="12" class="muted">121</text>
+<line x1="510.0" y1="140" x2="510.0" y2="555" class="grid"/>
+<text x="510.0" y="580" text-anchor="middle" font-size="12" class="muted">242</text>
+<line x1="650.0" y1="140" x2="650.0" y2="555" class="grid"/>
+<text x="650.0" y="580" text-anchor="middle" font-size="12" class="muted">362</text>
+<line x1="790.0" y1="140" x2="790.0" y2="555" class="grid"/>
+<text x="790.0" y="580" text-anchor="middle" font-size="12" class="muted">483</text>
+<line x1="930.0" y1="140" x2="930.0" y2="555" class="grid"/>
+<text x="930.0" y="580" text-anchor="middle" font-size="12" class="muted">604</text>
+<text x="212" y="182.5" text-anchor="end" font-size="14" font-weight="600">RSA-2048</text>
+<rect x="230" y="155.0" width="296.6" height="45.0" class="bar" fill="#d97706"/>
+<line x1="526.6" y1="177.5" x2="526.6" y2="177.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="526.6" y1="172.5" x2="526.6" y2="182.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="526.6" y1="172.5" x2="526.6" y2="182.5" stroke="#0f172a" stroke-width="2"/>
+<text x="535.6" y="185.6" font-size="12" font-weight="600">256 bytes</text>
+<text x="212" y="237.5" text-anchor="end" font-size="14" font-weight="600">RSA-3072</text>
+<rect x="230" y="210.0" width="444.9" height="45.0" class="bar" fill="#d97706"/>
+<line x1="674.9" y1="232.5" x2="674.9" y2="232.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="674.9" y1="227.5" x2="674.9" y2="237.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="674.9" y1="227.5" x2="674.9" y2="237.5" stroke="#0f172a" stroke-width="2"/>
+<text x="683.9" y="240.6" font-size="12" font-weight="600">384 bytes</text>
+<text x="212" y="292.5" text-anchor="end" font-size="14" font-weight="600">RSA-4096</text>
+<rect x="230" y="265.0" width="593.2" height="45.0" class="bar" fill="#d97706"/>
+<line x1="823.2" y1="287.5" x2="823.2" y2="287.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="823.2" y1="282.5" x2="823.2" y2="292.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="823.2" y1="282.5" x2="823.2" y2="292.5" stroke="#0f172a" stroke-width="2"/>
+<text x="832.2" y="295.6" font-size="12" font-weight="600">512 bytes</text>
+<text x="212" y="347.5" text-anchor="end" font-size="14" font-weight="600">ECDSA P-256</text>
+<rect x="230" y="320.0" width="82.3" height="45.0" class="bar" fill="#d97706"/>
+<line x1="312.3" y1="342.5" x2="313.4" y2="342.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="312.3" y1="337.5" x2="312.3" y2="347.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="313.4" y1="337.5" x2="313.4" y2="347.5" stroke="#0f172a" stroke-width="2"/>
+<text x="321.3" y="350.6" font-size="12" font-weight="600">71 bytes</text>
+<text x="212" y="402.5" text-anchor="end" font-size="14" font-weight="600">ECDSA P-384</text>
+<rect x="230" y="375.0" width="118.2" height="45.0" class="bar" fill="#d97706"/>
+<line x1="348.2" y1="397.5" x2="349.3" y2="397.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="348.2" y1="392.5" x2="348.2" y2="402.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="349.3" y1="392.5" x2="349.3" y2="402.5" stroke="#0f172a" stroke-width="2"/>
+<text x="357.2" y="405.6" font-size="12" font-weight="600">102 bytes</text>
+<text x="212" y="457.5" text-anchor="end" font-size="14" font-weight="600">ECDSA P-521</text>
+<rect x="230" y="430.0" width="161.1" height="45.0" class="bar" fill="#d97706"/>
+<line x1="389.9" y1="452.5" x2="391.1" y2="452.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="389.9" y1="447.5" x2="389.9" y2="457.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="391.1" y1="447.5" x2="391.1" y2="457.5" stroke="#0f172a" stroke-width="2"/>
+<text x="400.1" y="460.6" font-size="12" font-weight="600">139 bytes</text>
+<text x="212" y="512.5" text-anchor="end" font-size="14" font-weight="600">Ed25519</text>
+<rect x="230" y="485.0" width="74.2" height="45.0" class="bar" fill="#d97706"/>
+<line x1="304.2" y1="507.5" x2="304.2" y2="507.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="304.2" y1="502.5" x2="304.2" y2="512.5" stroke="#0f172a" stroke-width="2"/>
+<line x1="304.2" y1="502.5" x2="304.2" y2="512.5" stroke="#0f172a" stroke-width="2"/>
+<text x="313.2" y="515.6" font-size="12" font-weight="600">64 bytes</text>
+<rect x="42" y="103" width="12" height="12" rx="3" fill="#d97706"/>
+<text x="61" y="115" font-size="13" class="muted">Signature</text>
+<text x="930" y="580" text-anchor="end" font-size="11" class="muted">bytes</text></svg>

@@ -1,0 +1,23 @@
+# Python environments and bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local benchmark output and scratch files
+results.json
+results-*.json
+*.tmp
+portfolio_index_draft.md
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Key material: never commit private keys
+*.pem
+*.key
+*.p12
+*.pfx

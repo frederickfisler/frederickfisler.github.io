@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="600" viewBox="0 0 1050 600">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<style>text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#0f172a}.muted{fill:#64748b}.grid{stroke:#cbd5e1;stroke-width:1}.bar{rx:7}</style>
+<text x="42" y="52" font-size="28" font-weight="700">Signing and verification latency</text>
+<text x="42" y="82" font-size="14" class="muted">Median across 5 independent runs; black whiskers show 95% bootstrap CI of run medians</text>
+<line x1="230.0" y1="140" x2="230.0" y2="555" class="grid"/>
+<text x="230.0" y="580" text-anchor="middle" font-size="12" class="muted">0</text>
+<line x1="370.0" y1="140" x2="370.0" y2="555" class="grid"/>
+<text x="370.0" y="580" text-anchor="middle" font-size="12" class="muted">1.35</text>
+<line x1="510.0" y1="140" x2="510.0" y2="555" class="grid"/>
+<text x="510.0" y="580" text-anchor="middle" font-size="12" class="muted">2.7</text>
+<line x1="650.0" y1="140" x2="650.0" y2="555" class="grid"/>
+<text x="650.0" y="580" text-anchor="middle" font-size="12" class="muted">4.05</text>
+<line x1="790.0" y1="140" x2="790.0" y2="555" class="grid"/>
+<text x="790.0" y="580" text-anchor="middle" font-size="12" class="muted">5.41</text>
+<line x1="930.0" y1="140" x2="930.0" y2="555" class="grid"/>
+<text x="930.0" y="580" text-anchor="middle" font-size="12" class="muted">6.76</text>
+<text x="212" y="182.5" text-anchor="end" font-size="14" font-weight="600">RSA-2048</text>
+<rect x="230" y="155.0" width="77.1" height="17.5" class="bar" fill="#2563eb"/>
+<line x1="306.8" y1="163.8" x2="307.3" y2="163.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="306.8" y1="158.8" x2="306.8" y2="168.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="307.3" y1="158.8" x2="307.3" y2="168.8" stroke="#0f172a" stroke-width="2"/>
+<text x="316.1" y="166.9" font-size="12" font-weight="600">0.7441 ms</text>
+<rect x="230" y="182.5" width="3.5" height="17.5" class="bar" fill="#0f766e"/>
+<line x1="233.5" y1="191.2" x2="233.8" y2="191.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="233.5" y1="186.2" x2="233.5" y2="196.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="233.8" y1="186.2" x2="233.8" y2="196.2" stroke="#0f172a" stroke-width="2"/>
+<text x="242.5" y="194.4" font-size="12" font-weight="600">0.0341 ms</text>
+<text x="212" y="237.5" text-anchor="end" font-size="14" font-weight="600">RSA-3072</text>
+<rect x="230" y="210.0" width="238.7" height="17.5" class="bar" fill="#2563eb"/>
+<line x1="466.3" y1="218.8" x2="487.4" y2="218.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="466.3" y1="213.8" x2="466.3" y2="223.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="487.4" y1="213.8" x2="487.4" y2="223.8" stroke="#0f172a" stroke-width="2"/>
+<text x="477.7" y="221.9" font-size="12" font-weight="600">2.304 ms</text>
+<rect x="230" y="237.5" width="6.3" height="17.5" class="bar" fill="#0f766e"/>
+<line x1="236.3" y1="246.2" x2="236.6" y2="246.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="236.3" y1="241.2" x2="236.3" y2="251.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="236.6" y1="241.2" x2="236.6" y2="251.2" stroke="#0f172a" stroke-width="2"/>
+<text x="245.3" y="249.4" font-size="12" font-weight="600">0.0608 ms</text>
+<text x="212" y="292.5" text-anchor="end" font-size="14" font-weight="600">RSA-4096</text>
+<rect x="230" y="265.0" width="572.7" height="17.5" class="bar" fill="#2563eb"/>
+<line x1="772.0" y1="273.8" x2="823.2" y2="273.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="772.0" y1="268.8" x2="772.0" y2="278.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="823.2" y1="268.8" x2="823.2" y2="278.8" stroke="#0f172a" stroke-width="2"/>
+<text x="811.7" y="276.9" font-size="12" font-weight="600">5.528 ms</text>
+<rect x="230" y="292.5" width="10.1" height="17.5" class="bar" fill="#0f766e"/>
+<line x1="240.0" y1="301.2" x2="240.6" y2="301.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="240.0" y1="296.2" x2="240.0" y2="306.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="240.6" y1="296.2" x2="240.6" y2="306.2" stroke="#0f172a" stroke-width="2"/>
+<text x="249.1" y="304.4" font-size="12" font-weight="600">0.09705 ms</text>
+<text x="212" y="347.5" text-anchor="end" font-size="14" font-weight="600">ECDSA P-256</text>
+<rect x="230" y="320.0" width="3.6" height="17.5" class="bar" fill="#2563eb"/>
+<line x1="233.6" y1="328.8" x2="233.7" y2="328.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="233.6" y1="323.8" x2="233.6" y2="333.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="233.7" y1="323.8" x2="233.7" y2="333.8" stroke="#0f172a" stroke-width="2"/>
+<text x="242.6" y="331.9" font-size="12" font-weight="600">0.03495 ms</text>
+<rect x="230" y="347.5" width="9.7" height="17.5" class="bar" fill="#0f766e"/>
+<line x1="239.3" y1="356.2" x2="239.7" y2="356.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="239.3" y1="351.2" x2="239.3" y2="361.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="239.7" y1="351.2" x2="239.7" y2="361.2" stroke="#0f172a" stroke-width="2"/>
+<text x="248.7" y="359.4" font-size="12" font-weight="600">0.0939 ms</text>
+<text x="212" y="402.5" text-anchor="end" font-size="14" font-weight="600">ECDSA P-384</text>
+<rect x="230" y="375.0" width="95.0" height="17.5" class="bar" fill="#2563eb"/>
+<line x1="324.3" y1="383.8" x2="334.3" y2="383.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="324.3" y1="378.8" x2="324.3" y2="388.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="334.3" y1="378.8" x2="334.3" y2="388.8" stroke="#0f172a" stroke-width="2"/>
+<text x="334.0" y="386.9" font-size="12" font-weight="600">0.9175 ms</text>
+<rect x="230" y="402.5" width="81.9" height="17.5" class="bar" fill="#0f766e"/>
+<line x1="309.8" y1="411.2" x2="315.5" y2="411.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="309.8" y1="406.2" x2="309.8" y2="416.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="315.5" y1="406.2" x2="315.5" y2="416.2" stroke="#0f172a" stroke-width="2"/>
+<text x="320.9" y="414.4" font-size="12" font-weight="600">0.7903 ms</text>
+<text x="212" y="457.5" text-anchor="end" font-size="14" font-weight="600">ECDSA P-521</text>
+<rect x="230" y="430.0" width="229.4" height="17.5" class="bar" fill="#2563eb"/>
+<line x1="452.8" y1="438.8" x2="477.3" y2="438.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="452.8" y1="433.8" x2="452.8" y2="443.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="477.3" y1="433.8" x2="477.3" y2="443.8" stroke="#0f172a" stroke-width="2"/>
+<text x="468.4" y="441.9" font-size="12" font-weight="600">2.214 ms</text>
+<rect x="230" y="457.5" width="175.9" height="17.5" class="bar" fill="#0f766e"/>
+<line x1="402.4" y1="466.2" x2="417.7" y2="466.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="402.4" y1="461.2" x2="402.4" y2="471.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="417.7" y1="461.2" x2="417.7" y2="471.2" stroke="#0f172a" stroke-width="2"/>
+<text x="414.9" y="469.4" font-size="12" font-weight="600">1.698 ms</text>
+<text x="212" y="512.5" text-anchor="end" font-size="14" font-weight="600">Ed25519</text>
+<rect x="230" y="485.0" width="4.9" height="17.5" class="bar" fill="#2563eb"/>
+<line x1="234.8" y1="493.8" x2="235.0" y2="493.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="234.8" y1="488.8" x2="234.8" y2="498.8" stroke="#0f172a" stroke-width="2"/>
+<line x1="235.0" y1="488.8" x2="235.0" y2="498.8" stroke="#0f172a" stroke-width="2"/>
+<text x="243.9" y="496.9" font-size="12" font-weight="600">0.0471 ms</text>
+<rect x="230" y="512.5" width="12.7" height="17.5" class="bar" fill="#0f766e"/>
+<line x1="242.6" y1="521.2" x2="242.8" y2="521.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="242.6" y1="516.2" x2="242.6" y2="526.2" stroke="#0f172a" stroke-width="2"/>
+<line x1="242.8" y1="516.2" x2="242.8" y2="526.2" stroke="#0f172a" stroke-width="2"/>
+<text x="251.7" y="524.4" font-size="12" font-weight="600">0.1226 ms</text>
+<rect x="42" y="103" width="12" height="12" rx="3" fill="#2563eb"/>
+<text x="61" y="115" font-size="13" class="muted">Signing</text>
+<rect x="207" y="103" width="12" height="12" rx="3" fill="#0f766e"/>
+<text x="226" y="115" font-size="13" class="muted">Verification</text>
+<text x="930" y="580" text-anchor="end" font-size="11" class="muted">ms</text></svg>

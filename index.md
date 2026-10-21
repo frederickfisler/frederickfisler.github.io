@@ -1,123 +1,53 @@
 ---
 layout: default
+title: Frederick Fisler | Cybersecurity and Cloud Security Portfolio
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Frederick Fisler
 
-[Link to another page](./another-page.html).
+### Cybersecurity and Cloud Security
 
-There should be whitespace between paragraphs.
+M.S. Cybersecurity and Privacy student at the University of Central Florida (Technical Track), with a foundation in applied mathematics, data analytics, and AI applications.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+I use this portfolio to document technical projects, experiments, and lessons in cybersecurity and cloud security. Each project includes its scope, implementation, evidence, and limitations so the work is easy to review and reproduce.
 
-# Header 1
+**Profiles:** [GitHub](https://github.com/frederickfisler) · [LinkedIn](https://www.linkedin.com/in/frederickfisler)
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+---
 
-## Header 2
+## Featured project
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+### Digital Signature Benchmark
 
-### Header 3
+A Python benchmark comparing RSA-PSS, ECDSA, and Ed25519 across key generation, signing, verification, and encoded key and signature sizes. It preserves raw measurements and environment metadata, checks signature acceptance and rejection behavior, and generates charts from the measured JSON runs.
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+**Measured evidence:** five independent runs, 10 trials per operation per run, 1,024-byte payload, Windows 11, Python 3.14.5, and `cryptography` 50.0.2. The median of run medians showed ECDSA P-256 signing at 0.0350 ms, Ed25519 signing at 0.0471 ms, and RSA-2048 signing at 0.7441 ms. Ed25519 signatures were 64 bytes. Results vary by system and describe this workload, not universal algorithm rankings.
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+**What it demonstrates**
 
-#### Header 4
+- 12 signature correctness checks across RSA, ECDSA, and Ed25519.
+- Key generation, signing, verification, serialized public-key size, and signature size comparisons.
+- Raw latency samples, summary statistics, and environment metadata in five JSON result files.
+- Four generated charts, a reproducibility workflow, and continuous integration tests.
+- Clear scope limits: this is an educational benchmark, not a security audit or production signing system.
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+**Technology:** Python · `cryptography` · RSA-PSS · ECDSA · Ed25519 · JSON · GitHub Actions
 
-##### Header 5
+**[Source code, experiment data, and charts](https://github.com/frederickfisler/frederickfisler.github.io/tree/main/projects/digital-signature-benchmark)** · [Benchmark README](https://github.com/frederickfisler/frederickfisler.github.io/blob/main/projects/digital-signature-benchmark/README.md)
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+![Signing and verification latency](projects/digital-signature-benchmark/assets/latency_sign_verify.svg)
 
-###### Header 6
+![Key generation latency](projects/digital-signature-benchmark/assets/latency_key_generation.svg)
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+---
 
-### There's a horizontal rule below this.
+## Focus areas
 
-* * *
+- Cybersecurity and cloud security
+- Applied cryptography and digital signatures
+- Applied mathematics and data analysis
+- Clear experimental methods and evidence-based technical writing
 
-### Here is an unordered list:
+## About this portfolio
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://docs.github.com/assets/images/help/repository/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+Projects are presented as learning and engineering work, with claims tied to observable behavior or recorded measurements. Performance figures are labeled with their environment, and educational demonstrations are not presented as audited or production-ready security products.

@@ -70,6 +70,27 @@ python analyze_results.py results/run.json
 
 Run `python digital_signature_benchmark.py --help` for all options. Iterations and payload size must be at least one; `--payload-size` sets the exact size of the built-in payload and is ignored with `--message`. The correctness checks run unless `--skip-tests` is supplied. RSA-4096 key generation can make a run noticeably longer.
 
+### Quick review for recruiters
+
+From a terminal in this project folder, a reviewer can create an environment, install the one dependency, run the automated checks, then make a fresh benchmark and charts:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python digital_signature_benchmark.py --iterations 10 --payload-size 1024 --output results/reviewer_run.json
+python analyze_results.py results/reviewer_run.json
+```
+
+The test command should report 9 passing tests. The benchmark writes raw observations and environment details to `results/reviewer_run.json`; the analyzer writes `results/summary.md` and four charts in `assets/`. The included experiment results are already available, so a reviewer can inspect those without rerunning the benchmark. For a quick tour, start with this README, then inspect `digital_signature_benchmark.py`, `tests/`, one JSON result, and the generated charts.
+
+### Interview explanation
+
+> I built a Python benchmark to compare RSA-PSS, ECDSA, and Ed25519 using the maintained `cryptography` library. It measures key generation, signing, and verification separately, keeps raw timing samples and environment metadata, and checks valid and invalid signature cases. I ran five independent rounds and summarized the median of each round with confidence intervals, then generated charts from the saved JSON. The results are specific to my machine and workload; this is a reproducible learning project, not a security audit or a claim that one algorithm is universally best.
+
+If asked what you would improve next, discuss collecting more independent runs, adding a second machine or operating system, and testing realistic message sizes and deployment constraints. Keep performance, security properties, and system suitability as separate questions.
+
 Run the standalone test suite with:
 
 ```powershell

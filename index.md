@@ -9,15 +9,17 @@ title: Frederick Fisler | Cybersecurity and Cloud Security Portfolio
 
 M.S. Cybersecurity and Privacy student at the University of Central Florida (Technical Track), with a foundation in applied mathematics, data analytics, and AI applications.
 
-I use this portfolio to document technical projects, experiments, and lessons in cybersecurity and cloud security. Each project includes its scope, implementation, evidence, and limitations so the work is easy to review and reproduce.
+I use this portfolio to document technical projects, experiments, and lessons across cybersecurity, AI security, identity and access management (IAM), and cloud security. It is a growing collection: the digital-signature benchmark is the first published project, and additional projects will be added as they are completed. Each project will include its scope, implementation, evidence, and limitations so the work is easy to review and reproduce.
 
 **Profiles:** [GitHub](https://github.com/frederickfisler) · [LinkedIn](https://www.linkedin.com/in/frederickfisler)
 
 ---
 
-## Featured project
+## Projects
 
-### Digital Signature Benchmark
+### Applied cryptography · Published
+
+#### Digital Signature Benchmark
 
 A Python benchmark comparing RSA-PSS, ECDSA, and Ed25519 across key generation, signing, verification, and encoded key and signature sizes. It preserves raw measurements and environment metadata, checks signature acceptance and rejection behavior, and generates charts from the measured JSON runs.
 
@@ -41,10 +43,29 @@ A Python benchmark comparing RSA-PSS, ECDSA, and Ed25519 across key generation, 
 
 ---
 
+## Planned project areas
+
+These are the next areas I plan to build into the portfolio. They are planned work, not completed projects.
+
+### AI security
+
+An applied project exploring how to identify and test security risks in an AI-enabled system, with a documented threat model, controlled evaluation, and mitigations.
+
+### Identity and access management
+
+A practical project on identity lifecycle, least-privilege access, and access review, with evidence showing how permissions are granted and checked.
+
+### Cloud security
+
+A cloud-focused project applying security baselines and configuration checks, with reproducible setup notes and clear treatment of cost and teardown.
+
+---
+
 ## Focus areas
 
 - Cybersecurity and cloud security
 - Applied cryptography and digital signatures
+- AI security and IAM (planned project areas)
 - Applied mathematics and data analysis
 - Clear experimental methods and evidence-based technical writing
 

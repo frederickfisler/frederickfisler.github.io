@@ -37,23 +37,26 @@ def bootstrap_median_ci(samples, replicates=10000, seed=20261021):
 
 
 def svg_chart(title, subtitle, labels, series, output_path, unit="ms"):
-    """Render a crisp, dependency-free grouped horizontal bar chart."""
-    width, left, right = 1050, 230, 120
-    row_height, top = 55, 150
+    """Render an Excel-inspired horizontal bar chart with labels beyond CI whiskers."""
+    width, left, right = 1160, 245, 190
+    row_height, top = 60, 155
     chart_width = width - left - right
-    max_value = max(high for _, values, color, intervals in series for value, (low, high) in zip(values, intervals)) * 1.18 or 1
-    height = top + len(labels) * row_height + 65
+    highest_ci = max(high for _, values, color, intervals in series for value, (low, high) in zip(values, intervals)) or 1
+    label_room = max(len(f"{value:.4g} {unit}") * 7.2 for _, values, color, intervals in series for value in values) + 22
+    max_value = highest_ci * chart_width / max(1, chart_width - label_room)
+    height = top + len(labels) * row_height + 70
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        '<rect width="100%" height="100%" fill="#f8fafc"/>',
-        '<style>text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#0f172a}.muted{fill:#64748b}.grid{stroke:#cbd5e1;stroke-width:1}.bar{rx:7}</style>',
+        '<rect width="100%" height="100%" fill="#ffffff"/>',
+        '<style>text{font-family:Calibri,Arial,sans-serif;fill:#243247}.muted{fill:#607086}.grid{stroke:#d9e2f0;stroke-width:1}.bar{rx:2}</style>',
         f'<text x="42" y="52" font-size="28" font-weight="700">{title}</text>',
-        f'<text x="42" y="82" font-size="14" class="muted">{subtitle}</text>']
+        f'<text x="42" y="82" font-size="14" class="muted">{subtitle}</text>',
+        f'<rect x="{left}" y="{top - 10}" width="{chart_width}" height="{len(labels) * row_height}" fill="#fbfcfe" stroke="#d9e2f0"/>']
     ticks = 5
     for tick in range(ticks + 1):
         value = max_value * tick / ticks
         x = left + chart_width * tick / ticks
         parts.append(f'<line x1="{x:.1f}" y1="{top - 10}" x2="{x:.1f}" y2="{height - 45}" class="grid"/>')
-        parts.append(f'<text x="{x:.1f}" y="{height - 20}" text-anchor="middle" font-size="12" class="muted">{value:.3g}</text>')
+        parts.append(f'<text x="{x:.1f}" y="{height - 22}" text-anchor="middle" font-size="12" class="muted">{value:.3g}</text>')
     group_height = row_height / max(1, len(series))
     for index, label in enumerate(labels):
         center = top + index * row_height + row_height / 2
@@ -61,8 +64,8 @@ def svg_chart(title, subtitle, labels, series, output_path, unit="ms"):
         for series_index, (series_name, values, color, intervals) in enumerate(series):
             value = values[index]
             low, high = intervals[index]
-            y = top + index * row_height + series_index * group_height + 5
-            bar_height = max(12, group_height - 10)
+            y = top + index * row_height + series_index * group_height + 6
+            bar_height = max(12, group_height - 12)
             bar_width = chart_width * value / max_value
             parts.append(f'<rect x="{left}" y="{y:.1f}" width="{bar_width:.1f}" height="{bar_height:.1f}" class="bar" fill="{color}"/>')
             low_x = left + chart_width * low / max_value
@@ -71,14 +74,15 @@ def svg_chart(title, subtitle, labels, series, output_path, unit="ms"):
             parts.append(f'<line x1="{low_x:.1f}" y1="{mid_y:.1f}" x2="{high_x:.1f}" y2="{mid_y:.1f}" stroke="#0f172a" stroke-width="2"/>')
             parts.append(f'<line x1="{low_x:.1f}" y1="{mid_y - 5:.1f}" x2="{low_x:.1f}" y2="{mid_y + 5:.1f}" stroke="#0f172a" stroke-width="2"/>')
             parts.append(f'<line x1="{high_x:.1f}" y1="{mid_y - 5:.1f}" x2="{high_x:.1f}" y2="{mid_y + 5:.1f}" stroke="#0f172a" stroke-width="2"/>')
-            parts.append(f'<text x="{left + bar_width + 9:.1f}" y="{y + bar_height * .68:.1f}" font-size="12" font-weight="600">{value:.4g} {unit}</text>')
+            label_x = max(left + bar_width, high_x) + 8
+            parts.append(f'<text x="{label_x:.1f}" y="{y + bar_height * .70:.1f}" font-size="12" font-weight="600">{value:.4g} {unit}</text>')
     legend_y = 115
     legend_x = 42
     for name, _, color, _ in series:
         parts.append(f'<rect x="{legend_x}" y="{legend_y - 12}" width="12" height="12" rx="3" fill="{color}"/>')
         parts.append(f'<text x="{legend_x + 19}" y="{legend_y}" font-size="13" class="muted">{name}</text>')
         legend_x += 165
-    parts.append(f'<text x="{width - right}" y="{height - 20}" text-anchor="end" font-size="11" class="muted">{unit}</text></svg>')
+    parts.append(f'<text x="{left + chart_width / 2:.1f}" y="{height - 3}" text-anchor="middle" font-size="12" class="muted">{unit}</text></svg>')
     output_path.write_text("\n".join(parts), encoding="utf-8")
 
 
